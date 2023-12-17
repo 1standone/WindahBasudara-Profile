@@ -1,0 +1,158 @@
+*, *::before,
+*::after {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Josefin Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+}
+p {
+	text-indent: 10px;
+}
+.nav-container {
+	width: 100%;
+	display: flex;
+	box-shadow: 0px 4px 4px 0px rgba(0,0,6,0.47);
+	align-items: center;
+	justify-content: space-around;
+	margin-inline: auto;
+	font-size: 14px;
+	position: sticky;
+	top: 0;
+	background-color: white;
+
+}
+.nav-container .nav-list ul {
+	list-style-type: none;
+	justify-content: flex-end;
+}
+
+.nav-container .nav-list ul li {
+	display: inline-block;
+	position: relative;
+}
+.nav-container .nav-list ul li a {
+	display: block;
+	padding: 10px 15px;
+	text-decoration: none;
+	text-align: center;
+	color: black;
+	border-radius: 9999px;
+}
+.nav-container .nav-list ul li a:hover {
+	background-color: #f2c157;
+	color: white;
+}
+.nav-container .nav-list ul li.dropdown-container:hover ul.dropdown {
+	display: block;
+}
+.nav-container .nav-list ul.dropdown {
+	width: auto auto;
+	padding: 0;
+	position: absolute;
+	z-index: 999;
+	background-color: #cfa344;
+	border-radius: 5px;
+	display: none;
+}
+.nav-container .nav-list ul.dropdown li {
+	display: block;
+	border-radius: 9999px;
+}
+.nav-container .logo {
+	padding: 5px;
+}
+main {
+	display: flex;
+	padding: 20px;
+	gap: 1.5rem;
+}
+#content {
+	display: flex;
+	flex: 5;
+	flex-flow: column nowrap;
+	width: 75%;
+	gap: 1rem 2rem;
+}
+.card {
+	box-shadow: 0px 0px 16px 1px rgba(209,164,107,0.56);
+	padding: 20px;
+	border-radius: 5px;
+	font-size: 15px;
+}
+.card img {
+	border-radius: 3px;
+}
+.article-images {
+	width: 100%;
+	max-height: 400px;
+	object-fit: cover;
+	object-position: top;
+}
+aside {
+	display: flex;
+	align-items: flex-start;
+	flex: 1;
+	width: 25%;
+	padding-left: 5px;
+}
+.profile {
+	background-color:#a69776;
+	color: white;
+}
+.profile header {
+	text-align: center;
+}
+.profile-image {
+	width: 200px;
+}
+table {
+	border-collapse: collapse;
+}
+table tr th, tr td{
+	padding: 10px;
+}
+#penghargaan table th {
+	border: 1px solid gray;
+	background-color: #e8bb4a;
+}
+table tr td.hasil {
+	background-color: #7ded21;
+}
+footer {
+	padding: 20px;
+	font-weight: 400;
+	text-align: center;
+	color: white;
+	background-color: #f2c157;
+}
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+  main aside {
+    align-self: center;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+	body {
+		flex-wrap: wrap;
+	}
+	.nav-container {
+		flex-direction: row;
+		width: auto;
+		margin: 0;
+		padding-block: 5px;
+	}
+
+}
